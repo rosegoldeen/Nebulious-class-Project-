@@ -347,7 +347,6 @@ GameObject:
   - component: {fileID: 216628204}
   - component: {fileID: 216628199}
   - component: {fileID: 216628201}
-  - component: {fileID: 216628203}
   - component: {fileID: 216628202}
   - component: {fileID: 216628207}
   - component: {fileID: 216628200}
@@ -454,6 +453,8 @@ GameObject:
   - component: {fileID: 216628302}
   - component: {fileID: 216628308}
   - component: {fileID: 216628307}
+  - component: {fileID: 216628309}
+  - component: {fileID: 216628203}
   m_Layer: 0
   m_Name: DT-firstScene
   m_TagString: Untagged
@@ -485,8 +486,10 @@ MonoBehaviour:
     y: -340
     width: 1114
     height: 859
-  selectedBlocks: []
-  selectedCommands: []
+  selectedBlocks:
+  - {fileID: 216628272}
+  selectedCommands:
+  - {fileID: 216628203}
   variables:
   - {fileID: 216628239}
   description: 
@@ -547,7 +550,7 @@ MonoBehaviour:
   itemId: 0
   blockName: Start
   description: 
-  eventHandler: {fileID: 216628203}
+  eventHandler: {fileID: 0}
   commandList:
   - {fileID: 216628202}
   - {fileID: 216628253}
@@ -584,18 +587,22 @@ MonoBehaviour:
   commentText: Start game
 --- !u!114 &216628203
 MonoBehaviour:
-  m_ObjectHideFlags: 2
-  m_PrefabParentObject: {fileID: 11462346, guid: 5e7fbc8d4eb714b279eeeef2262c1e1a,
-    type: 2}
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 216628198}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Script: {fileID: 11500000, guid: 00d03ae0919f04264b018681ed534177, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  parentBlock: {fileID: 216628201}
-  waitForFrames: 1
+  itemId: 121
+  indentLevel: 0
+  _sceneName:
+    stringRef: {fileID: 0}
+    stringVal: 
+  loadingImage: {fileID: 0}
+  sceneNameOLD: 
 --- !u!4 &216628204
 Transform:
   m_ObjectHideFlags: 0
@@ -2326,6 +2333,7 @@ MonoBehaviour:
   commandList:
   - {fileID: 216628303}
   - {fileID: 216628302}
+  - {fileID: 216628203}
 --- !u!114 &216628273
 MonoBehaviour:
   m_ObjectHideFlags: 2
@@ -2886,8 +2894,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodeRect:
     serializedVersion: 2
-    x: 281.76514
-    y: -194.10631
+    x: 326.50198
+    y: -187.52734
     width: 120
     height: 40
   tint: {r: 1, g: 1, b: 1, a: 1}
@@ -2895,7 +2903,7 @@ MonoBehaviour:
   itemId: 107
   blockName: Main Menu
   description: 
-  eventHandler: {fileID: 0}
+  eventHandler: {fileID: 216628309}
   commandList: []
 --- !u!114 &216628297
 MonoBehaviour:
@@ -3161,6 +3169,19 @@ MonoBehaviour:
   eventHandler: {fileID: 0}
   commandList:
   - {fileID: 216628307}
+--- !u!114 &216628309
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 216628198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2f6487d21a03404cb21b245f0242e79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  parentBlock: {fileID: 216628296}
+  waitForFrames: 1
 --- !u!1 &248051564
 GameObject:
   m_ObjectHideFlags: 0
